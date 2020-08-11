@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Genres from '../components/Genres'
 
-class Genres extends Component {
+class GenresContainer extends Component {
 
     render() {
         
         return (
             <div>
-                Genres Component!
+                {/* <Genres genres={this.props.genres} /> */}
             </div>
         )
     }
@@ -20,4 +21,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(Genres);
+export default connect(mapStateToProps)(GenresContainer);

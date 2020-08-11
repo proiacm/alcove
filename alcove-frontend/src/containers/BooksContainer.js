@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Books from '../components/Books'
 
-class Books extends Component {
+class BooksContainer extends Component {
     render() {
         return (
             <div>
-                Book Component!
+                {/* <Books books={this.props.books} /> */}
             </div>
         )
     }
@@ -18,4 +19,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(Books);
+export default connect(mapStateToProps)(BooksContainer);
