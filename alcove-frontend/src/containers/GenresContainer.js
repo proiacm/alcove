@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Genres from '../components/Genres'
+import { getGenres } from '../actions/genres'
 
 class GenresContainer extends Component {
+
+    componentDidMount(){
+        this.props.getGenres()
+    }
 
     render() {
         
@@ -21,4 +26,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(GenresContainer);
+export default connect(mapStateToProps, { getGenres })(GenresContainer);
