@@ -6,3 +6,5 @@ const rootReducer = combineReducers({
     genreReducer, 
     bookReducer
 })
+
+export default rootReducer
