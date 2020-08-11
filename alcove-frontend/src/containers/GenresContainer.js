@@ -8,7 +8,7 @@ class GenresContainer extends Component {
         
         return (
             <div>
-                {/* <Genres genres={this.props.genres} /> */}
+                <Genres genres={this.props.genres} />
             </div>
         )
     }
