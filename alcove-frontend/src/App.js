@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import Genres from './containers/Genres';
+import Navbar from './components/Navbar';
 
 
 function App() {
   return (
     <div className="App">
-      I love programming!
+      {/* <Navbar /> */}
+      <Genres />
     </div>
   );
 }

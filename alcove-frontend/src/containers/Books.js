@@ -5,10 +5,17 @@ class Books extends Component {
     render() {
         return (
             <div>
-                
+                Book Component!
             </div>
         )
     }
 }
 
-export default connect()(Books);
+const mapStateToProps = state => {
+    return {
+        books: state.bookReducer.books,
+        loading: state.bookReducer.loading
+    }
+}
+
+export default connect(mapStateToProps)(Books);
