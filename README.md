@@ -1,4 +1,4 @@
-# Alcove U+1F4D6
+# Alcove
 Nestle into your alcove -- Log books you want to read, track books you have read, and save memorable quotes. 
 
 License Copyright 2020 proiacm

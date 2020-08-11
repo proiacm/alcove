@@ -3,9 +3,9 @@ class GenresController < ApplicationController
 
   # GET /genres
   def index
-    @genres = Genre.all
+    genres = Genre.all
 
-    render json: @genres
+    render json: genres
   end
 
   # GET /genres/1
@@ -15,12 +15,12 @@ class GenresController < ApplicationController
 
   # POST /genres
   def create
-    @genre = Genre.new(genre_params)
+    genre = Genre.new(genre_params)
 
-    if @genre.save
-      render json: @genre, status: :created, location: @genre
+    if genre.save
+      render json: genre
     else
-      render json: @genre.errors, status: :unprocessable_entity
+      render json: genre.errors, status: :unprocessable_entity
     end
   end
 
