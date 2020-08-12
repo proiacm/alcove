@@ -27,7 +27,8 @@ class GenreForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state} onChange={this.handleChange}/>
+                    <input type="text" value={this.state.name} onChange={this.handleChange}/>
+                    <input type="submit"/>
                 </form>
             </div>
         )
