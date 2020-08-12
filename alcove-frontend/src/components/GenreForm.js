@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { addGenre } from '../actions/genres'
 
 class GenreForm extends Component {
 
@@ -16,12 +14,13 @@ class GenreForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        const genre = {name: this.state.name}
-        this.props.addGenre(genre)
+        this.props.handleOnSubmit(this.state.name)
+        console.log(this.state.name)
         this.setState({
             name: ""
         })
     }
+
 
     render() {
         return (
@@ -35,4 +34,4 @@ class GenreForm extends Component {
     }
 }
 
-export default connect(null, { addGenre })(GenreForm)
+export default GenreForm
