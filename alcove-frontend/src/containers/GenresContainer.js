@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Genres from '../components/Genres'
+import Genre from '../components/Genre'
 import { getGenres } from '../actions/genres'
 
 class GenresContainer extends Component {
@@ -10,11 +10,22 @@ class GenresContainer extends Component {
     }
 
     render() {
+    
+        const genres = this.props.genres.map((genre) => 
+            <div key={genre.id}> <div className="card">
+        <div className="card-body">
+            <h5 className="card-title"> <Genre genre={genre} /> </h5>
+            {/* <p className="card-text"><Books/></p> */}
+            <a href="#" className="card-link">Add Book</a>
+        </div> 
+        </div><br/>
+        </div>
+        )
         
         return (
-            <div>
-                <Genres genres={this.props.genres} />
-            </div>
+            <>
+                {this.props.loading ? <h4>Loading...</h4> : genres }
+            </>
         )
     }
 }
