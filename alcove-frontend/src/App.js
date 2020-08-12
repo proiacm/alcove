@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <h3>Add Genre</h3>
+      <h4>Add New Genre</h4>
       <GenreForm />
       <GenresContainer />
     </div>
