@@ -18,10 +18,10 @@ class GenresContainer extends Component {
     }
 
     render() {
-    
-        // display genres and it's books
+
         const genres = this.props.genres.map((genre, i) => {
             const books = genre.books.map(book => <Book book={book}/>)
+
             return (
                 <div>
                     <Genre key={i} genre={genre} />
