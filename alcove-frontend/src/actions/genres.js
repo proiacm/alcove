@@ -18,6 +18,6 @@ export const addGenre = (genre) => {
             }
         })
         .then(res => res.json())
-        .then(genre => dispatch({ type: 'GENRE_ADDED', payload: genre }))
+        .then(genre => dispatch({ type: 'GENRE_ADDED', payload: genre}))
     }
 }

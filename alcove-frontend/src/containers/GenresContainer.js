@@ -15,17 +15,15 @@ class GenresContainer extends Component {
         this.props.addGenre({name: name})
     }
 
-
     render() {
     
         const genres = this.props.genres.map((genre, i) => <Genre key={i} genre={genre} />)
         
         return (
             <>
-                 <h4>Add New Genre</h4>
+                <h4>Add New Genre</h4>
                 <GenreForm handleOnSubmit={this.handleSubmit}/>
                 { this.props.loading ? <h4>Loading...</h4> : genres }
-
             </>
         )
     }

@@ -1,9 +1,9 @@
 export const getBooks = () => {
     return dispatch => {
         dispatch({ type: 'LOADING_BOOKS'})
-        fetch('/')
+        fetch('/books')
         .then(res => res.json())
-        .then(books => dispatch({ type: 'BOOKS_LOADED', payload: books}))
+        .then(books => console.log(books))
     }
 }
 

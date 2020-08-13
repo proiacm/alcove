@@ -15,12 +15,11 @@ class GenreForm extends Component {
     handleSubmit = event => {
         event.preventDefault()
         this.props.handleOnSubmit(this.state.name)
-        console.log(this.state.name)
+        // console.log(this.state.name)
         this.setState({
             name: ""
         })
     }
-
 
     render() {
         return (
