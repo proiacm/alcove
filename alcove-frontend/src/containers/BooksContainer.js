@@ -18,7 +18,7 @@ class BooksContainer extends Component {
     }
 
     render() {
-         
+        
         const books = this.props.books.map((book, i) => <Book key={i} book={book} />)
         
         return (

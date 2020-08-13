@@ -4,6 +4,8 @@ import Genre from '../components/Genre';
 import { getGenres } from '../actions/genres';
 import { addGenre } from '../actions/genres';
 import GenreForm from '../components/GenreForm';
+import Book from '../components/Book';
+
 
 class GenresContainer extends Component {
 
@@ -17,7 +19,17 @@ class GenresContainer extends Component {
 
     render() {
     
-        const genres = this.props.genres.map((genre, i) => <Genre key={i} genre={genre} />)
+        // display genres and it's books
+        const genres = this.props.genres.map((genre, i) => {
+            const books = genre.books.map(book => <Book book={book}/>)
+            return (
+                <div>
+                    <Genre key={i} genre={genre} />
+                    {/* {books} */}
+                </div>
+            )
+        })
+
       
         return (
             <>

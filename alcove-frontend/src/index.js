@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import GenresContainer from './containers/GenresContainer';
 import BooksContainer from './containers/BooksContainer';
 import NavBar from './components/NavBar';
+import GenreBooksContainer from './containers/GenreBooksContainer'
 
 
 
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route exact path="/" component={App} />
       <Route exact path="/genres" component={GenresContainer} />
       <Route exact path="/books" component={BooksContainer} />
+      <Route path="/genres/:id" component={GenreBooksContainer} />
       </>
     </Router>
   </Provider>,
