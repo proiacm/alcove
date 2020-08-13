@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Book = props => {
-   console.log(props)
+//    console.log(props.book)
   
     return (
       
         
-        <li>{props}</li>
+        <li>{props.book.title}</li>
     )
 }
 

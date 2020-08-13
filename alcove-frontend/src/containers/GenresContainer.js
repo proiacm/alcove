@@ -18,6 +18,8 @@ class GenresContainer extends Component {
     render() {
     
         const genres = this.props.genres.map((genre, i) => <Genre key={i} genre={genre} />)
+        console.log(genres)
+
         
         return (
             <>

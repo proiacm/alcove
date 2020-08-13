@@ -5,7 +5,6 @@ import Book from '../components/Book'
 
 const Genre = props => {
 
-    // props.genre.books.map(book => console.log(book.title))
 
     return (
         <div key={props.genre.id}> <div className="card">

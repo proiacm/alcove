@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class BookForm extends Component {
 
     state = {
-        genre_id: null,
+        genre_id: "",
         title: "",
         author: "",
         quotes: "",
@@ -19,13 +19,17 @@ class BookForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.handleOnSubmit(this.state.name)
+        const book = {
+            genre_id: this.state.genre_id,
+            title: this.state.title,
+            author: this.state.author
+        }
+        this.props.handleOnSubmit(book)
+        console.log(book)
         this.setState({
-            genre_id: null,
+            genre_id: "",
             title: "",
-            author: "",
-            quotes: "",
-            completed: false
+            author: ""
         })
     }
 
@@ -33,13 +37,13 @@ class BookForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <label>Select Genre:<br/>
                     <select name='genre_id' value={this.state.genre_id} onChange={this.handleChange}>
                         { this.props.genres.map((genre, i) => <option key={i} value={genre.id}> {genre.name} </option>)}
-                    </select>    
-                    <input type="text" name='title' value={this.state.title} onChange={this.handleChange} placeholder="Title"/>
-                    <input type="text" name='author' value={this.state.author} onChange={this.handleChange} placeholder="Author"/>
-                    <input type="text_area" name='quotes' value={this.state.quotes} onChange={this.handleChange} placeholder="Quotes"/>
-                    <input type="checkbox" name='completed'/>
+                    </select></label><br/>  
+                    <label>Title:<br/><input type="text" name='title' value={this.state.title} onChange={this.handleChange} placeholder="Title"/></label><br/>
+                    <label>Author:<br/><input type="text" name='author' value={this.state.author} onChange={this.handleChange} placeholder="Author"/></label><br/>
+                    {/* <label>Quotes:<br/><input type="text_area" name='quotes' value={this.state.quotes} onChange={this.handleChange} placeholder="Quotes"/></label><br/> */}
                     <input type="submit"/>
                 </form>
             </div>
