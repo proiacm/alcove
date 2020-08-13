@@ -13,6 +13,19 @@ export default (state = { books: [], loading: false}, action) => {
                 loading: false
             }
 
+        case 'ADDING_BOOK':
+            return {
+                ...state,
+                loading: true
+            } 
+         
+        case 'BOOK_ADDED':
+            return {
+                ...state,
+                books: [...state.books, action.payload],
+                loading: false
+            } 
+
         default :
             return state
     }

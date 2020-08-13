@@ -23,12 +23,15 @@ class GenreForm extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.name} onChange={this.handleChange}/>
-                    <input type="submit"/>
-                </form> <br/>
-            </div>
+                <div className="card text-center">
+                <div className="card-body">
+                    <h4>Add New Genre</h4> 
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" value={this.state.name} onChange={this.handleChange} placeholder="Genre"/><br/><br/>
+                        <input type="submit"/>
+                    </form><br/>
+                </div>
+                </div>  
         )
     }
 }

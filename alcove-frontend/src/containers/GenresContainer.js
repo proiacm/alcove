@@ -18,14 +18,11 @@ class GenresContainer extends Component {
     render() {
     
         const genres = this.props.genres.map((genre, i) => <Genre key={i} genre={genre} />)
-        console.log(genres)
-
-        
+      
         return (
             <>
-                <h4>Add New Genre</h4>
                 <GenreForm handleOnSubmit={this.handleSubmit}/>
-                { this.props.loading ? <h4>Loading...</h4> : genres }
+                { this.props.loading ? <h4>Loading...</h4> : genres}
             </>
         )
     }

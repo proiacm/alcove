@@ -23,7 +23,6 @@ class BooksContainer extends Component {
         
         return (
             <div>
-                <h4>Add New Book</h4>
                 <BookForm genres={this.props.genres} handleOnSubmit={this.handleSubmit}/>
                  { this.props.loading ? <h4>Loading...</h4> : books }
             </div>

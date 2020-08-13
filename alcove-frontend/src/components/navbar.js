@@ -9,8 +9,8 @@ function NavBar() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="genres">Genres</Nav.Link>
-          <Nav.Link href="books">Books</Nav.Link>
+          <Nav.Link href="http://localhost:3000/genres">Genres</Nav.Link>
+          <Nav.Link href="http://localhost:3000/books">Books</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       </Navbar>

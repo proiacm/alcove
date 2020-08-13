@@ -25,7 +25,7 @@ class BookForm extends Component {
             author: this.state.author
         }
         this.props.handleOnSubmit(book)
-        console.log(book)
+        // console.log(book)
         this.setState({
             genre_id: "",
             title: "",
@@ -35,7 +35,9 @@ class BookForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="card text-center">
+                <div className="card-body">
+                <h4>Add New Book</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Select Genre:<br/>
                     <select name='genre_id' value={this.state.genre_id} onChange={this.handleChange}>
@@ -46,6 +48,7 @@ class BookForm extends Component {
                     {/* <label>Quotes:<br/><input type="text_area" name='quotes' value={this.state.quotes} onChange={this.handleChange} placeholder="Quotes"/></label><br/> */}
                     <input type="submit"/>
                 </form>
+                </div>
             </div>
         )
     }
