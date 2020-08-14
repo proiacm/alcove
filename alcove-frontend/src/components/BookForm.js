@@ -49,7 +49,8 @@ class BookForm extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>Select Genre:<br/>
                     <select name='genre_id' value={this.state.genre_id} onChange={this.handleSelectChange}>
-                        { this.props.genres.map((genre, i) => <option key={i} value={genre.id}> {genre.name} </option>)}
+                    <option selected value> -- select a genre -- </option>
+                        { this.props.genres.map((genre, i) => <option key={i} value={genre.id} > {genre.name}</option>)}
                     </select></label><br/>  
                     <label>Title:<br/><input type="text" name='title' value={this.state.title} onChange={this.handleChange} placeholder="Title"/></label><br/>
                     <label>Author:<br/><input type="text" name='author' value={this.state.author} onChange={this.handleChange} placeholder="Author"/></label><br/>
