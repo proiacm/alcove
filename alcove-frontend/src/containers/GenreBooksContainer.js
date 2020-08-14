@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { deleteBook } from '../actions/books'
 
-class GenreContainer extends Component {
+class GenreBooksContainer extends Component {
 
     handleClick = event => {
         this.props.deleteBook(event.target.id)
@@ -31,4 +31,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { deleteBook })(GenreContainer)
+export default connect(mapStateToProps, { deleteBook })(GenreBooksContainer)
