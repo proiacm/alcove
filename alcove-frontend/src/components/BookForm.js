@@ -17,6 +17,12 @@ class BookForm extends Component {
         })
     }
 
+    handleSelectChange = event => {
+        this.setState ({
+            genre_id: parseInt(event.target.options[event.target.selectedIndex].value)
+        })
+    }
+
     handleSubmit = event => {
         event.preventDefault()
         const book = {
@@ -24,13 +30,15 @@ class BookForm extends Component {
             title: this.state.title,
             author: this.state.author
         }
-        this.props.handleOnSubmit(book)
-        // console.log(book)
+        this.props.addBook(book)
+        console.log(book)
+        const genre_id = this.state.genre_id
         this.setState({
             genre_id: "",
             title: "",
             author: ""
         })
+        this.props.history.push(`/genres/${genre_id}`)
     }
 
     render() {
@@ -40,7 +48,7 @@ class BookForm extends Component {
                 <h4>Add New Book</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Select Genre:<br/>
-                    <select name='genre_id' value={this.state.genre_id} onChange={this.handleChange}>
+                    <select name='genre_id' value={this.state.genre_id} onChange={this.handleSelectChange}>
                         { this.props.genres.map((genre, i) => <option key={i} value={genre.id}> {genre.name} </option>)}
                     </select></label><br/>  
                     <label>Title:<br/><input type="text" name='title' value={this.state.title} onChange={this.handleChange} placeholder="Title"/></label><br/>

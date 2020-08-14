@@ -33,6 +33,7 @@ export default (state = { books: [], loading: false}, action) => {
             } 
          
         case 'BOOK_DELETED':
+            debugger
             return {
                 ...state,
                 books: [...state.books.filter(book => `${book.id}` !== action.payload)],

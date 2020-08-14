@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 function NavBar() {
   return (
+    <>
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="/">Alcove</Navbar.Brand>
@@ -15,6 +16,10 @@ function NavBar() {
       </Navbar.Collapse>
       </Navbar>
     </div>
+      <div>
+        {/* <img src="https://i.imgur.com/BjqENy6.jpg" class="navimg" alt="Responsive image"></img> */}
+      </div>
+   </>
   )
 }
 

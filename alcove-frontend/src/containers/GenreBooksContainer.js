@@ -2,16 +2,38 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { deleteBook } from '../actions/books'
+import { getGenres } from '../actions/genres'
 
 class GenreBooksContainer extends Component {
 
+    componentDidMount(){
+        this.props.getGenres()
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot){
+        // debugger
+        if (prevProps.genres.find(g => g.id == this.props.match.params.id).books.length !== this.props.books.filter(b => b.genre.id == this.props.match.params.id).length){
+            this.props.getGenres()
+        }
+    }
+
+    // shouldComponentUpdate(nextProps, nextState){
+    //    if(nextProps.books.length !== this.props.books.length){
+    //        return true
+    //    }
+    //    else {
+    //        return false
+    //    }
+    // }
+
     handleClick = event => {
         this.props.deleteBook(event.target.id)
+
     }
 
 
     render() {
-
+        // debugger
         const genre = this.props.genres.find( genre => genre.id == this.props.match.params.id)
         const books = genre.books.map(book => <Book book={book} handleClick={this.handleClick}/>)
 
@@ -25,10 +47,10 @@ class GenreBooksContainer extends Component {
 }
 
 const mapStateToProps = state => {
-
     return {
-        genres: state.genreReducer.genres
+        genres: state.genreReducer.genres,
+        books: state.bookReducer.books
     }
 }
 
-export default connect(mapStateToProps, { deleteBook })(GenreBooksContainer)
+export default connect(mapStateToProps, { deleteBook, getGenres })(GenreBooksContainer)

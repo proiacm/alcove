@@ -8,24 +8,12 @@ import './index.css';
 import App from './App';
 import rootReducer from './reducers/index';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import GenresContainer from './containers/GenresContainer';
-import BooksContainer from './containers/BooksContainer';
-import NavBar from './components/NavBar';
-import GenreBooksContainer from './containers/GenreBooksContainer';
+
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 ReactDOM.render(
   <Provider store={store}>
-     <NavBar />
-    <Router>
-      <>
-      <Route exact path="/" component={App} />
-      <Route exact path="/genres" component={GenresContainer} />
-      <Route exact path="/books/new" component={BooksContainer} />
-      <Route path="/genres/:id" component={GenreBooksContainer} />
-      </>
-    </Router>
+    <App />
   </Provider>,
   document.getElementById('root')
 );
