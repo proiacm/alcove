@@ -13,7 +13,6 @@ import GenresContainer from './containers/GenresContainer';
 import BooksContainer from './containers/BooksContainer';
 import NavBar from './components/NavBar';
 import GenreBooksContainer from './containers/GenreBooksContainer';
-import BookDetails from './containers/BookDetails'
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 ReactDOM.render(
@@ -25,7 +24,6 @@ ReactDOM.render(
       <Route exact path="/genres" component={GenresContainer} />
       <Route exact path="/books/new" component={BooksContainer} />
       <Route path="/genres/:id" component={GenreBooksContainer} />
-      <Route path="/books/:id" component={BookDetails} />
       </>
     </Router>
   </Provider>,
