@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import BooksContainer from './containers/BooksContainer';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import GenresContainer from './containers/GenresContainer';
 import NavBar from './components/NavBar';
@@ -10,18 +9,13 @@ import BookForm from './components/BookForm';
 import { connect } from 'react-redux';
 import { addBook } from './actions/books';
 import { getGenres } from './actions/genres';
-import { getBooks } from './actions/books';
 import Home from './components/Home';
-
-
 
 class App extends Component {
 
   componentDidMount() {
     this.props.getGenres()
-    // this.props.getBooks()
   }
-
 
   render(){
 
@@ -48,4 +42,4 @@ const mapStateToProps = state => {
   }
 }  
 
-export default connect(mapStateToProps, { addBook, getGenres, getBooks })(App)
+export default connect(mapStateToProps, { addBook, getGenres })(App)
