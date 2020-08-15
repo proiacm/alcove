@@ -4,14 +4,17 @@ Nestle into your alcove -- Log books you want to read, track books you have read
 A React Redux application with Rails API
 
 Backend:
-run the following commands in your terminal:
+run the following commands in your terminal
+
 $ bundle install
+
 $ rails s
 
 API endpoint: http://localhost:3001
 
 Frontend:
-run the following commands in your terminal:
+run the following command in your terminal
+
 $ open index.html
 
 or navigate to http://localhost:3000
