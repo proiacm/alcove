@@ -13,6 +13,7 @@ API endpoint: http://localhost:3001
 Frontend:
 run the following commands in your terminal:
 $ open index.html
+
 or navigate to http://localhost:3000
 
 License Copyright 2020 proiacm
