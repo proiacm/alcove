@@ -10,27 +10,17 @@ class GenreBooksContainer extends Component {
         this.props.getGenres()
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
+    componentDidUpdate(prevProps){
         // debugger
         if (prevProps.genres.find(g => g.id == this.props.match.params.id).books.length !== this.props.books.filter(b => b.genre.id == this.props.match.params.id).length){
             this.props.getGenres()
         }
     }
 
-    // shouldComponentUpdate(nextProps, nextState){
-    //    if(nextProps.books.length !== this.props.books.length){
-    //        return true
-    //    }
-    //    else {
-    //        return false
-    //    }
-    // }
-
     handleClick = event => {
         this.props.deleteBook(event.target.id)
 
     }
-
 
     render() {
         // debugger

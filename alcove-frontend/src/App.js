@@ -9,9 +9,9 @@ import GenreBooksContainer from './containers/GenreBooksContainer';
 import BookForm from './components/BookForm';
 import { connect } from 'react-redux';
 import { addBook } from './actions/books';
-import { getGenres } from './actions/genres'
-import { getBooks } from './actions/books'
-import Home from './components/Home'
+import { getGenres } from './actions/genres';
+import { getBooks } from './actions/books';
+import Home from './components/Home';
 
 
 
@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.getGenres()
-    this.props.getBooks()
+    // this.props.getBooks()
   }
 
 

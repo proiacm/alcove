@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addBook } from '../actions/books';
-import { getGenres } from '../actions/genres';
-import BookForm from '../components/BookForm';
+// import React, { Component } from 'react';
+// import { connect } from 'react-redux';
+// import { addBook } from '../actions/books';
+// import { getGenres } from '../actions/genres';
+// import BookForm from '../components/BookForm';
 
-class BooksContainer extends Component {
+// class BooksContainer extends Component {
 
-    componentDidMount() {
-        this.props.getGenres()
-    }
+//     componentDidMount() {
+//         this.props.getGenres()
+//     }
 
-    handleSubmit = book => {
-        this.props.addBook(book)
-    }
+//     handleSubmit = book => {
+//         this.props.addBook(book)
+//     }
 
-    render() {
+//     render() {
         
-        // const books = this.props.books.map((book, i) => <Book key={i} book={book} />)
+//         // const books = this.props.books.map((book, i) => <Book key={i} book={book} />)
         
-        return (
-            <div>
-                {/* <BookForm genres={this.props.genres} handleOnSubmit={this.handleSubmit}/> */}
-                 {/* { this.props.loading ? <h4>Loading...</h4> : books } */}
-            </div>
-        )
-    }
-}
+//         return (
+//             <div>
+//                 {/* <BookForm genres={this.props.genres} handleOnSubmit={this.handleSubmit}/> */}
+//                  {/* { this.props.loading ? <h4>Loading...</h4> : books } */}
+//             </div>
+//         )
+//     }
+// }
 
-const mapStateToProps = state => {
+// const mapStateToProps = state => {
 
-    return {
-        genres: state.genreReducer.genres
-    }
-}
+//     return {
+//         genres: state.genreReducer.genres
+//     }
+// }
 
-export default connect(mapStateToProps, { getGenres, addBook })(BooksContainer);
+// export default connect(mapStateToProps, { getGenres, addBook })(BooksContainer);
