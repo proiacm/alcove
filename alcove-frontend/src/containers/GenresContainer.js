@@ -6,7 +6,6 @@ import { addGenre } from '../actions/genres';
 import GenreForm from '../components/GenreForm';
 import Book from '../components/Book';
 
-
 class GenresContainer extends Component {
 
     componentDidMount(){
@@ -29,7 +28,6 @@ class GenresContainer extends Component {
                 </div>
             )
         })
-
       
         return (
             <>

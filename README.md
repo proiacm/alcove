@@ -1,6 +1,20 @@
 # Alcove
 Nestle into your alcove -- Log books you want to read, track books you have read, and save memorable quotes. 
 
+A React Redux application with Rails API
+
+Backend:
+run the following commands in your terminal:
+$ bundle install
+$ rails s
+
+API endpoint: http://localhost:3001
+
+Frontend:
+run the following commands in your terminal:
+$ open index.html
+or navigate to http://localhost:3000
+
 License Copyright 2020 proiacm
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

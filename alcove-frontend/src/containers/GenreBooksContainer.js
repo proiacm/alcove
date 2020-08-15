@@ -30,7 +30,7 @@ class GenreBooksContainer extends Component {
         return (
             <div className="card text-center" >
                 <h3>{genre.name}</h3>
-                    {books}
+                {books}
             </div>
         )
     }
