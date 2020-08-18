@@ -3,7 +3,9 @@ import React from 'react'
  function Home() {
 
     return (
-       <div>Welcome to Alcove!</div>
+       <div>
+          <img src="https://i.imgur.com/BjqENy6.jpg" class="img-fluid" alt="Responsive image"></img>
+       </div>
     )
 }
 

@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <>
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Navbar.Brand href="/">Alcove</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
