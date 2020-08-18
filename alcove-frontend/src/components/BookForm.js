@@ -7,8 +7,6 @@ class BookForm extends Component {
         title: "",
         author: "",
         quotes: "",
-        completed: false
-
     }
 
     handleChange = event => {

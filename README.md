@@ -1,5 +1,5 @@
 # Alcove
-Nestle into your alcove -- Log books you want to read, track books you have read, and save memorable quotes. 
+Nestle into your alcove -- Log your favorite books, and save memorable quotes. 
 
 A React Redux application with Rails API
 
