@@ -28,7 +28,8 @@ class BookForm extends Component {
         const book = {
             genre_id: this.state.genre_id,
             title: this.state.title,
-            author: this.state.author
+            author: this.state.author,
+            quotes: this.state.quotes
         }
         this.props.addBook(book)
         console.log(book)
@@ -36,7 +37,8 @@ class BookForm extends Component {
         this.setState({
             genre_id: "",
             title: "",
-            author: ""
+            author: "",
+            quotes: ""
         })
         this.props.history.push(`/genres/${genre_id}`)
     }
@@ -54,6 +56,7 @@ class BookForm extends Component {
                     </select></label><br/>  
                     <label>Title:<br/><input type="text" name='title' value={this.state.title} onChange={this.handleChange} placeholder="Title"/></label><br/>
                     <label>Author:<br/><input type="text" name='author' value={this.state.author} onChange={this.handleChange} placeholder="Author"/></label><br/>
+                    <label>Add memorable quote or note:<br/><input type="text" name='quotes' value={this.state.quotes} onChange={this.handleChange} placeholder="This stuck with me.."/></label><br/>
                     <input type="submit"/>
                 </form>
                 </div>
