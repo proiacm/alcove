@@ -1,13 +1,13 @@
 // import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 // import { addBook } from '../actions/books';
-// import { getGenres } from '../actions/genres';
-// import BookForm from '../components/BookForm';
+// import { getBooks } from '../actions/books';
 
-// class BooksContainer extends Component {
+
+// class BookContainer extends Component {
 
 //     componentDidMount() {
-//         this.props.getGenres()
+//         this.props.getBooks()
 //     }
 
 //     handleSubmit = book => {
@@ -16,7 +16,7 @@
 
 //     render() {
         
-//         // const books = this.props.books.map((book, i) => <Book key={i} book={book} />)
+//         const books = this.props.books.map((book, i) => console.log(book))
         
 //         return (
 //             <div>
@@ -28,10 +28,10 @@
 // }
 
 // const mapStateToProps = state => {
-
+//     console.log(state)
 //     return {
-//         genres: state.genreReducer.genres
+//         books: state.bookReducer.books
 //     }
 // }
 
-// export default connect(mapStateToProps, { getGenres, addBook })(BooksContainer);
+// export default connect(mapStateToProps, { getBooks, addBook })(BookContainer);

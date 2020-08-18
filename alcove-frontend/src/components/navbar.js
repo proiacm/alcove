@@ -16,9 +16,6 @@ function NavBar() {
       </Navbar.Collapse>
       </Navbar>
     </div>
-      <div>
-        {/* <img src="https://i.imgur.com/BjqENy6.jpg" class="navimg" alt="Responsive image"></img> */}
-      </div>
    </>
   )
 }

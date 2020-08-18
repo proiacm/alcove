@@ -54,7 +54,6 @@ class BookForm extends Component {
                     </select></label><br/>  
                     <label>Title:<br/><input type="text" name='title' value={this.state.title} onChange={this.handleChange} placeholder="Title"/></label><br/>
                     <label>Author:<br/><input type="text" name='author' value={this.state.author} onChange={this.handleChange} placeholder="Author"/></label><br/>
-                    {/* <label>Quotes:<br/><input type="text_area" name='quotes' value={this.state.quotes} onChange={this.handleChange} placeholder="Quotes"/></label><br/> */}
                     <input type="submit"/>
                 </form>
                 </div>
