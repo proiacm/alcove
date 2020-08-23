@@ -13,18 +13,16 @@ class GenresContainer extends Component {
     }
 
     handleSubmit = name => {
-        this.props.addGenre({name: name})
+        this.props.addGenre({name: name}) //action creator
     }
 
     render() {
 
         const genres = this.props.genres.map((genre, i) => {
-            const books = genre.books.map(book => <Book book={book}/>)
-
+             genre.books.map(book => <Book book={book}/>)
             return (
                 <div>
                     <Genre key={i} genre={genre} />
-                    {/* {books} */}
                 </div>
             )
         })
