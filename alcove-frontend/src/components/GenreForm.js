@@ -15,7 +15,6 @@ class GenreForm extends Component {
     handleSubmit = event => {
         event.preventDefault()
         this.props.handleOnSubmit(this.state.name)
-        // console.log(this.state.name)
         this.setState({
             name: ""
         })
@@ -23,15 +22,28 @@ class GenreForm extends Component {
 
     render() {
         return (
-                <div className="card text-center">
-                <div className="card-body">
+                // <div className="card text-center">
+                // <div className="card-body">
+                //     <h4>Add New Genre</h4> 
+                //     <form onSubmit={this.handleSubmit}>
+                //         <input type="text" value={this.state.name} onChange={this.handleChange} placeholder="Genre"/><br/><br/>
+                //         <input type="submit"/>
+                //     </form><br/>
+                // </div>
+                // </div>  
+                <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                    <div class="card-body">
                     <h4>Add New Genre</h4> 
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" value={this.state.name} onChange={this.handleChange} placeholder="Genre"/><br/><br/>
-                        <input type="submit"/>
-                    </form><br/>
+                     <form onSubmit={this.handleSubmit}>
+                         <input type="text" value={this.state.name} onChange={this.handleChange} placeholder="Genre"/><br/><br/>
+                         <input type="submit"/>
+                     </form>
+                    </div>
+                    </div>
                 </div>
-                </div>  
+                </div>
         )
     }
 }

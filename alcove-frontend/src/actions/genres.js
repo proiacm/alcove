@@ -2,7 +2,12 @@ export const getGenres = () => {
     return dispatch => {
         dispatch({ type: 'LOADING_GENRES'})
         fetch('/genres')
-        .then(res => res.json())
+        .then(response => {
+            if(response.ok) {
+               console.log('Error!')
+            }
+            return response.json()
+         })
         .then(genres => dispatch({ type: 'GENRES_LOADED', payload: genres}))
     }
 }
@@ -18,6 +23,8 @@ export const addGenre = (genre) => {
             }
         })
         .then(res => res.json())
-        .then(genre => dispatch({ type: 'GENRE_ADDED', payload: genre}))
+        .then(genre => {
+            return dispatch({ type: 'GENRE_ADDED', payload: genre})
+        })
     }
 }

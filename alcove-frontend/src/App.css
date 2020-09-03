@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-image: url(https://i.imgur.com/BjqENy6.jpg);
+  background-repeat: no-repeat;
+  background-color: #F8F9FA;
 }
 
 .App-logo {
@@ -27,6 +30,15 @@
 .App-link {
   color: #61dafb;
 }
+
+.card {
+  margin: 50px;
+}
+
+.card-body {
+  background-color: #F8F9FA;
+}
+
 
 @keyframes App-logo-spin {
   from {
